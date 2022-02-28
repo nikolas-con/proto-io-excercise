@@ -2,9 +2,10 @@
   "name": "proto-io-excercise",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "index.html",
   "scripts": {
-    "dev": "parcel index.html"
+    "dev": "parcel --port 3000",
+    "build": "parcel build"
   },
   "keywords": [],
   "author": "",
