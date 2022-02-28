@@ -1,4 +1,4 @@
-import questionView from './question'
+import questionView from '../question'
 
 const handleStartedBtn = (state) => {
   questionView(state)
