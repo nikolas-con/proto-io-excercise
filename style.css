@@ -62,15 +62,15 @@
   transform: scale(0.96);
 }
 
-.button__disabled:disabled {
+.button--disabled:disabled {
   background-color: #b8d9f9;
 }
 
-.button__disabled:disabled:hover {
+.button--disabled:disabled:hover {
   background-color: #b8d9f9;
 }
 
-.button-container {
+.button--container {
   width: 100%;
   display: flex;
   align-items: center;
@@ -95,6 +95,7 @@
   margin-bottom: 10px;
 }
 .question--answers {
+  width: fit-content;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -102,7 +103,6 @@
 .question--answer {
   margin-bottom: 10px;
   color: var(--main-font-color);
-  width: fit-content;
 }
 .question--lable {
   margin-left: 10px;

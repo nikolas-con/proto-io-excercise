@@ -64,11 +64,11 @@ const questionView = (state) => {
   answersContainer.className = 'question--answers'
 
   const btnContainer = document.createElement('div')
-  btnContainer.className = 'button-container'
+  btnContainer.className = 'button--container'
   const nextBtn = document.createElement('button')
   nextBtn.id = 'next-button'
   nextBtn.textContent = 'Next'
-  nextBtn.className = 'button button__disabled'
+  nextBtn.className = 'button button--disabled'
   nextBtn.addEventListener('click', (e) => onHandleNextBtn(e, state))
   btnContainer.appendChild(nextBtn)
 
