@@ -1,14 +1,23 @@
 {
   "name": "proto-io-excercise",
   "version": "1.0.0",
-  "description": "",
   "source": "index.html",
   "scripts": {
     "dev": "parcel --port 3000",
     "build": "parcel build"
   },
-  "keywords": [],
-  "author": "",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "last 2 versions"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.3.2"
