@@ -1,18 +1,16 @@
 const fetchData = async (url) => {
-  const response = await fetch(url)
+  try {
+    const response = await fetch(url)
 
-  if (!response.ok) {
-    alert('Something went wrong')
-    return {
-      ok: response.ok,
-      data: {},
+    if (!response.ok) {
+      throw new Error(response.statusText)
     }
-  }
 
-  const data = await response.json()
-  return {
-    data,
-    ok: response.ok,
+    const data = await response.json()
+
+    return { data, ok: response.ok }
+  } catch (error) {
+    return { ok: false, data: {} }
   }
 }
 

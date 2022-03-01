@@ -1,5 +1,6 @@
 import { fetchData } from './utilities'
 import wellcomeView from './welcame'
+import errorView from './error'
 
 const initialState = {
   questions: [],
@@ -29,5 +30,10 @@ const getData = async (state) => {
 
 window.onload = async () => {
   const state = await getData(initialState)
-  if (state) wellcomeView(state)
+
+  if (state) {
+    wellcomeView(state)
+  } else {
+    errorView()
+  }
 }
