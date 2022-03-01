@@ -1,8 +1,8 @@
 ### Overview
-This app is made with vanilla javascript.
+This app is made with Vanilla Javascript.
 <br>
 <br>
-You can find a live demo of the app on this [link](https://modest-kalam-63acb8.netlify.app/).
+You can find a [live demo](https://modest-kalam-63acb8.netlify.app/) of the app.
 
 ### Project Set up ⚒
 
