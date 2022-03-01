@@ -4,7 +4,7 @@
   "source": "index.html",
   "scripts": {
     "dev": "parcel --port 3000",
-    "build": "parcel build"
+    "build": "rimraf dist && parcel build"
   },
   "browserslist": {
     "production": [
@@ -20,6 +20,7 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.3.2"
+    "parcel": "^2.3.2",
+    "rimraf": "^3.0.2"
   }
 }
