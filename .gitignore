@@ -1,3 +1,4 @@
 dist
+build
 .parcel-cache
 node_modules

@@ -4,7 +4,8 @@
   "source": "index.html",
   "scripts": {
     "dev": "parcel --port 3000",
-    "build": "rimraf dist && parcel build"
+    "build": "rimraf build && parcel build --dist-dir build",
+    "prod_local": "npx serve build"
   },
   "browserslist": {
     "production": [
