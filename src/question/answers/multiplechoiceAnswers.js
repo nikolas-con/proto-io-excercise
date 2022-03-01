@@ -14,7 +14,7 @@ const handleMultiplechoiceMultiple = (e, id, answers) => {
   }
 }
 
-const handleMultiplechoiceQuestion = (currentQuestionId, questionType, possibleAnswers, answers) => {
+const handleMultiplechoiceAnswers = (currentQuestionId, questionType, possibleAnswers, answers) => {
   const possibleAnswersElement = possibleAnswers.map((possibleAnswer) => {
     const answerContainer = document.createElement('div')
     answerContainer.className = 'question--answer'
@@ -41,4 +41,4 @@ const handleMultiplechoiceQuestion = (currentQuestionId, questionType, possibleA
   return possibleAnswersElement
 }
 
-export { handleMultiplechoiceQuestion }
+export { handleMultiplechoiceAnswers }

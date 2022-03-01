@@ -6,7 +6,7 @@ const initialState = {
   answers: {},
   results: [],
   points: {},
-  currentQuestionIndex: -1,
+  currentQuestionIndex: 0,
   title: '',
   description: '',
 }

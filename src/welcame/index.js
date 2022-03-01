@@ -1,8 +1,11 @@
+import questionContent from '../question/content'
 import questionView from '../question'
 
 const handleStartedBtn = (state) => {
   questionView(state)
+  questionContent(state)
 }
+
 const wellcomeView = (state) => {
   const app = document.getElementById('app')
 

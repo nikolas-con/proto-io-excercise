@@ -1,7 +1,7 @@
 const onChange = (e, id, answers) => {
   answers[id] = e.target.value === 'true'
 }
-const handleTruefalseQuestion = (currentQuestionId, answers) => {
+const handleTruefalseAnswers = (currentQuestionId, answers) => {
   const possibleAnswers = ['true', 'false']
 
   const possibleAnswersElement = possibleAnswers.map((possibleAnswer) => {
@@ -28,4 +28,4 @@ const handleTruefalseQuestion = (currentQuestionId, answers) => {
   return possibleAnswersElement
 }
 
-export { handleTruefalseQuestion }
+export { handleTruefalseAnswers }

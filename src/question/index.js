@@ -1,7 +1,6 @@
+import questionContent from './content'
 import resultView from '../result'
-import { handleMultiplechoiceQuestion } from './multiplechoiceQuestion'
-import { handleTruefalseQuestion } from './truefalseQuestion'
-import { removeElements, haveSameContents, delay } from '../utilities'
+import { haveSameContents, removeElements, delay } from '../utilities'
 
 const onHandleNextBtn = async (e, state) => {
   const currentQuestion = state.questions[state.currentQuestionIndex]
@@ -37,13 +36,13 @@ const onHandleNextBtn = async (e, state) => {
 
   if (state.currentQuestionIndex !== state.questions.length) {
     buttonElement.disabled = false
-    questionView(state)
+    questionContent(state)
   } else {
     resultView(state)
   }
 }
 
-const questionTemplate = (state) => {
+const questionView = (state) => {
   const container = document.getElementById('container')
   container.className = 'container container-start'
   removeElements(container)
@@ -77,39 +76,6 @@ const questionTemplate = (state) => {
   container.appendChild(questionText)
   container.appendChild(answersContainer)
   container.appendChild(btnContainer)
-}
-
-const questionView = (state) => {
-  const container = document.getElementById('container')
-
-  if (state.currentQuestionIndex < 0) {
-    questionTemplate(state)
-    state.currentQuestionIndex++
-  }
-
-  const currentQuestion = state.questions[state.currentQuestionIndex]
-
-  const imageElement = container.querySelector('#question-image')
-  imageElement.src = currentQuestion.img
-
-  const questionContextElement = container.querySelector('#question-context')
-  questionContextElement.textContent = currentQuestion.title
-
-  let possibleAnswersElements
-  if (currentQuestion.question_type === 'multiplechoice-single' || currentQuestion.question_type === 'multiplechoice-multiple') {
-    possibleAnswersElements = handleMultiplechoiceQuestion(currentQuestion.q_id, currentQuestion.question_type, currentQuestion.possible_answers, state.answers)
-  } else if (currentQuestion.question_type === 'truefalse') {
-    possibleAnswersElements = handleTruefalseQuestion(currentQuestion.q_id, state.answers)
-  }
-  const answersContainerElement = container.querySelector('#answers-container')
-
-  if (answersContainerElement.childNodes.length > 0) {
-    removeElements(answersContainerElement)
-  }
-
-  possibleAnswersElements.forEach((possibleAnswer) => {
-    answersContainerElement.appendChild(possibleAnswer)
-  })
 }
 
 export default questionView
